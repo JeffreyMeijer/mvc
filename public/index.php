@@ -9,9 +9,8 @@
    <body style="">
      <?php
         // code...
-        if(isset($_GET['route'])) {
-          echo $_GET['route'];
-        }
+        $app = new \mvc\App();
+        echo $app;
         //example
         $test = new Test();
         echo $test;
