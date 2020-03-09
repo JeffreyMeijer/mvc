@@ -9,7 +9,9 @@
    <body style="">
      <?php
         // code...
-
+        if(isset($_GET['route'])) {
+          echo $_GET['route'];
+        }
         //example
         $test = new Test();
         echo $test;
