@@ -12,8 +12,8 @@
         $app = new \mvc\App();
         echo $app;
         //example
-        $test = new Test();
-        echo $test;
+        // $test = new Test();
+        // echo $test;
       ?>
    </body>
  </html>

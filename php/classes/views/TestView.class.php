@@ -1,5 +1,5 @@
 <?php
-namespace mvc\views;
+namespace views;
 
 class TestView extends \mvc\View {
   public function getHTML() {
