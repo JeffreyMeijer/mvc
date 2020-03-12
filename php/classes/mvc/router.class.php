@@ -16,6 +16,7 @@ class Router {
     $model = isset($routes[$route]["model"]) ? "\\models\\". $routes[$route]["model"] : null;
     $controller = isset($routes[$route]["controller"]) ? "\\controllers\\". $routes[$route]["controller"] : null;
     $view = "\\views\\". $routes[$route]["view"];
+    $this->model = new $model;
     $this->controller = new $controller($this->model);
     $this->view = new $view($this->controller,$this->model);
   }

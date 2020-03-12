@@ -12,8 +12,12 @@ class FormView extends \mvc\View {
     $output .= "<input type='submit' name='submit'>";
     $output .= "</form>";
     $output .= "<br/>";
-    $output .= "<h3>Voornaam: ". $voornaam ."</h3>";
-    $output .= "<h3>Achternaam: ". $achternaam. "</h3>";
+    if($voornaam) {
+      $output .= "<h3>Voornaam: ". $voornaam ."</h3>";
+    }
+    if($achternaam) {
+      $output .= "<h3>Achternaam: ". $achternaam. "</h3>";
+    }
     return $output;
   }
 }

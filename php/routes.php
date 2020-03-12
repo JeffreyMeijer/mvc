@@ -14,6 +14,11 @@ $routes = array(
     "view" => "TestView",
     "controller" => "TestController",
   ),
+  "model" => array(
+    "view" => "ModelView",
+    "controller" => "ModelController",
+    "model" => "ModelModel",
+  )
 );
 
  ?>
