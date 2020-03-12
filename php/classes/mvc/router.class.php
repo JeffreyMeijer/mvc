@@ -13,10 +13,11 @@ class Router {
       $this->route = explode("/", $_GET["route"]);
     }
     $route = isset($routes[$this->getRoute()]) ? $this->getRoute() : DEFAULT_ROUTE;
-    $controller = "\\controllers\\". $routes[$route]["controller"];
+    $model = isset($routes[$route]["model"]) ? "\\models\\". $routes[$route]["model"] : null;
+    $controller = isset($routes[$route]["controller"]) ? "\\controllers\\". $routes[$route]["controller"] : null;
     $view = "\\views\\". $routes[$route]["view"];
-    $this->controller = new $controller(null);
-    $this->view = new $view($this->controller,null);
+    $this->controller = new $controller($this->model);
+    $this->view = new $view($this->controller,$this->model);
   }
 
   private function getRoute() {
