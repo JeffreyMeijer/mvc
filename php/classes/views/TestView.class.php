@@ -12,5 +12,4 @@ class TestView extends \mvc\View {
   }
 }
 
-
  ?>
