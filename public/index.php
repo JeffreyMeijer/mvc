@@ -4,6 +4,7 @@
    <head>
      <meta charset="utf-8">
      <title>MVC structuur</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
      <link rel="stylesheet" href="css/master.css">
    </head>
    <body style="">

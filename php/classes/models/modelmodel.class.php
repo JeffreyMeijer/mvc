@@ -11,7 +11,7 @@ class ModelModel extends \mvc\Model {
   }
   public function getAllData() {
     $conn = $this->createConnection();
-    $sql = "SELECT * from 'personen'";
+    $sql = "SELECT * from personen";
     $result = mysqli_query($conn,$sql);
     return mysqli_fetch_all($result,MYSQLI_ASSOC);
   }
