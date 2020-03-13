@@ -15,8 +15,10 @@ class Router {
     $route = isset($routes[$this->getRoute()]) ? $this->getRoute() : DEFAULT_ROUTE;
     $model = isset($routes[$route]["model"]) ? "\\models\\". $routes[$route]["model"] : null;
     $controller = isset($routes[$route]["controller"]) ? "\\controllers\\". $routes[$route]["controller"] : null;
-    $view = "\\views\\". $routes[$route]["view"];
-    $this->model = new $model;
+    $view = isset($routes[$route]["view"]) ? "\\views\\". $routes[$route]["view"] : null;
+    if(!$model === null) {
+      $this->model = new $model;
+    }
     $this->controller = new $controller($this->model);
     $this->view = new $view($this->controller,$this->model);
   }

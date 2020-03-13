@@ -18,7 +18,13 @@ $routes = array(
     "view" => "ModelView",
     "controller" => "ModelController",
     "model" => "ModelModel",
-  )
+  ),
+  "red" => array(
+    "controller" => "RedController",
+  ),
+  "blue" => array(
+    "controller" => "BlueController",
+  ),
 );
 
  ?>
