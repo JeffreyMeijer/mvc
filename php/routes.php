@@ -23,6 +23,7 @@ $routes = array(
     "controller" => "RedController",
   ),
   "blue" => array(
+    "view" => "BlueView",
     "controller" => "BlueController",
   ),
 );
